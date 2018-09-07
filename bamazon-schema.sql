@@ -11,6 +11,7 @@ CREATE TABLE products(
   PRIMARY KEY (item_id)
 );
 
+-- move to seeds file
 INSERT INTO products (product_name, department_name, price, stock_quantity)
 VALUES ("Coca Cola", "Beverages", 2.99, 67), 
   ("Kitty Litter", "Pet Supplies", 10.99, 12),
