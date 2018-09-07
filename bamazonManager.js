@@ -168,12 +168,12 @@ function newProduct() {
       }
     ])
     .then(function(answer) {
-      var product = answer.product;
+      var product = answer.new;
       var dept = answer.department;
-      var price = answer.price;
+      var price = parseFloat(answer.price);
       var quant = answer.quant;
 
-      var query = `INSERT INTO products (product_name, department_name, price, stock_quantity) VALUES (${product}, ${dept}, ${price}, ${quant})`;
+      var query = `INSERT INTO products (product_name, department_name, price, stock_quantity) VALUES ('${product}', '${dept}', '${price}', '${quant}')`;
       connection.query(query, function(err) {
         if (err) throw err;
         console.log("Updated inventory!\n");
